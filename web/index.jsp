@@ -15,7 +15,7 @@
 <% Date a =new Date();
 String time = "The time is "+ a;
 out.println(time);
-    out.print("ssd");
+    out.print("Prepei na parw ayti tin allagi!");
 %>
   </body>
 </html>
