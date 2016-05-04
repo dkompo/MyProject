@@ -24,6 +24,7 @@ public class JAXBParser {
             per.setName("Dkompo");
             System.out.println(per);
             System.out.println(emp);
+            System.out.println("Added a new feature");
         } catch (Exception e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
