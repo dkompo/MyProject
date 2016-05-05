@@ -25,7 +25,7 @@ public class JAXBParser {
             System.out.println(per);
             System.out.println(emp);
             System.out.println("Added a new feature!");
-            System.out.println("Added a sec feature");
+            System.out.println("Added a sec feature!!");
             System.out.println("Added a third feature");
         } catch (Exception e) {
             System.out.println(e.getMessage());
