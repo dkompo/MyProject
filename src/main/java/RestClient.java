@@ -1,8 +1,8 @@
 import dim.model.CityInfo;
+import org.apache.commons.beanutils.BeanUtils;
 import org.codehaus.jackson.JsonFactory;
 import org.codehaus.jackson.JsonParser;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -52,11 +52,13 @@ public class RestClient {
 //            System.out.println(json);
             conn.disconnect();
             CityInfo cityInfo = null;
+            TestModel testModel = new TestModel();
             ObjectMapper mapper = new ObjectMapper();
 
             cityInfo = mapper.readValue(parser, CityInfo.class);
+            BeanUtils.copyProperties(testModel, cityInfo);
             System.out.println(cityInfo);
-
+            System.out.println("\n \n \n"+ testModel);
             double currentTempInCelsius;
             double kelvinTemp = Double.parseDouble(cityInfo.getMain().getTemp());
             currentTempInCelsius = kelvinTemp - 273;
